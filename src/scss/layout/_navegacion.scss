@@ -1,0 +1,157 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.nav-telefono {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include m.tablet {
+    display: none;
+  }
+
+  .linea {
+    height: .3rem;
+    width: 100%;
+    background-color: v.$oscuro;
+    border-radius: .5rem;
+    display: block;
+    margin-block: .2rem;
+    transition: .3s;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 70%;
+    }
+
+  }
+
+  &.activo {
+
+    .linea {
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        width: 100%;
+      }
+
+      &:nth-child(1) {
+        transform: rotate(45deg)
+        translateX(.5rem)
+        translateY(.45rem);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg)
+        translateX(.5rem)
+        translateY(-.45rem)
+      }
+
+    }
+
+  }
+
+}
+
+.nav-desktop {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  left: 0;
+  height: 0vh;
+  width: 100%;
+  transition: all 700ms ease;
+  overflow: hidden;
+
+  a {
+    opacity: 0;
+    transition: all 700ms ease;
+    padding: 2.5rem 0;
+    color: v.$oscuro;
+    font-size: 2.4rem;
+    font-weight: v.$bold;
+    text-align: center;
+    transform: translateY(-100vh);
+
+    &:first-of-type {
+      margin-top: 10rem;
+    }
+  }
+
+  @include m.tablet{
+    position: inherit;
+    height: auto;
+    background-color: transparent;
+    flex-direction: row;
+    width: auto;
+    transition: none;
+
+    a {
+      opacity: 1;
+      margin: 0 1.5rem;
+      transition: none;
+      padding: 0;
+      text-align: center;
+      transform: translateY(0);
+      font-size: 1.6rem;
+      
+      &::after {
+        content: '';
+        display: block;
+        height: .7rem;
+        width: 0%;
+        background-color: v.$oscuro;
+        position: absolute;
+        bottom: -.5rem;
+        left: 0;
+        transition: 500ms;
+      }
+
+      @include m.desktop {
+        font-size: 1.8rem;
+      }
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &.activo {
+    height: 100vh;
+
+    a {
+      transform: translateY(0);
+      opacity: 1;
+  
+      &:hover {
+        opacity: 0.7;
+      }
+      
+      @include m.telefonoHorizontal {
+        padding: 1.5rem 0;
+
+        &:first-of-type {
+          margin-top: 5rem;
+        }
+      }
+    }
+
+  }
+}

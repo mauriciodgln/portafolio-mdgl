@@ -1,0 +1,104 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.contenido-principal {
+
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 9rem 0;
+
+  @include m.desktop {
+    margin-top: 8vh;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: v.$regular;
+
+    @include m.telefono {
+      font-size: 2.8rem;
+    }
+  }
+
+  .nombre {
+    font-size: 3.6rem;
+    font-family: v.$fuenteSecundaria;
+    font-weight: v.$bold;
+    color: v.$oscuro;
+    display: block;
+    margin-top: 1rem;
+
+    @include m.telefono {
+      font-size: 6.4rem;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    max-width: 80rem;
+    margin-top: 2rem;
+  }
+
+  p,
+  span {
+    font-weight: v.$semibold;
+
+    @include m.telefono {
+      font-size: 2.4rem;
+    }
+  }
+
+  span {
+    color: v.$grisOscuro;
+  }
+}
+
+.boton-contacto {
+  background-color: v.$gris;
+  border-radius: .4rem;
+  color: v.$blanco;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 5rem;
+  width: 20rem;
+  margin-top: 4rem;
+
+  svg {
+    stroke: v.$blanco;
+  }
+}
+
+.trabajos-destacados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: v.$grisOscuro;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-size: 1.4rem;
+  gap: 1rem;
+  margin-top: 8vh;
+
+  animation: bounce .5s alternate infinite ease-in;
+
+  @keyframes bounce {
+    0%{
+      transform: translateY(-.3rem);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+
+  @include m.tablet {
+    font-size: 1.8rem;
+    margin-top: 15vh;
+  }
+}
+

@@ -1,0 +1,32 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.contenido-contacto {
+  max-width: 60rem;
+  margin: 1.5rem auto;
+  text-align: center;
+
+  @include m.tablet {
+    padding: 5rem 0;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    font-weight: v.$bold;
+    margin: 2.5rem 0;
+
+    @include m.telefono {
+      font-size: 4rem;
+    }
+
+    @include m.tablet {
+      font-size: 5rem;
+    }
+  }
+
+  a {
+    margin: 4rem auto 0;
+  }
+}
