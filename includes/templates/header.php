@@ -77,9 +77,9 @@
         </a>
         <nav class="nav-desktop">
           <a href="/">Sobre mí</a>
-          <a href="/">Portafolio</a>
+          <a href="../../portafolio.php">Portafolio</a>
           <a href="/">Contacto</a>
-          <a href="CV.pdf" target="_blank">CV</a>
+          <a href="../../CV.pdf" target="_blank">CV</a>
         </nav>
         <nav class="nav-telefono">
           <span class="linea"></span>
