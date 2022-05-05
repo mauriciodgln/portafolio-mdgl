@@ -1,9 +1,4 @@
 
-document.addEventListener('DOMContentLoaded', function(){
-  modoPantalla();
-});
-
-
 // Variables
 
 const navTelefono = document.querySelector('.nav-telefono');
@@ -34,6 +29,8 @@ function eventListeners() {
 
 
 // Funciones
+
+modoPantalla();
 
 function desplegarMenu() {
   const iconosContacto = document.querySelector('.iconos-contacto');
