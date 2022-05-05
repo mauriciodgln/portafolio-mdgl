@@ -3,7 +3,7 @@
   <ul>
 
     <li>
-      <a class="icono light-dark">
+      <a href="#" class="icono light-dark">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-moon dark-mode"

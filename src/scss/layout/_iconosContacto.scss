@@ -1,0 +1,110 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.iconos-contacto {
+
+  li {
+    list-style: none;
+
+    &:first-of-type svg {
+      fill: v.$negro;
+    }
+
+    a {
+      display: inline-block;
+      padding: 1rem;
+      transition: all 0.25s ease-out;
+
+      &:hover {
+        transform: translateY(-.5rem);
+      }
+    }
+    
+  }
+
+  opacity: 0;
+  height: 0;
+  transform: translateY(-8rem);
+  overflow: hidden;
+
+  @include m.tablet {
+
+    width: 4rem;
+    position: fixed;
+    bottom: 3rem;
+    color: v.$negro;
+    left: 3rem;
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    max-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    &::after {
+      content: '';
+      height: 8rem;
+      width: .2rem;
+      border-radius: .5rem;
+      background-color: v.$oscuro;
+    }
+
+    @include m.desktop {
+      left: 5rem;
+    }
+  }
+
+  &.activo {
+
+    ul {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    opacity: 1;
+    height: auto;
+    width: 100%;
+    transform: translateY(0);
+    transition: all 500ms ease;
+    position: fixed;
+    bottom: 20vh;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+  
+    &::before {
+      content: '';
+      height: .3rem;
+      width: 90%;
+      background-color: v.$oscuro;
+      position: absolute;
+      top: 5rem;
+    }
+
+    @include m.telefonoHorizontal {
+      bottom: 8vh;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+  
+}
+
+.icono {
+
+  cursor: pointer;
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+

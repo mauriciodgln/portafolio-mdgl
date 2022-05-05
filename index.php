@@ -79,7 +79,7 @@
         incluirTemplate('proyectos', $inicio = true);
       ?>
 
-      <section class="seccion contenedor skills-contacto">
+      <section class="seccion contenedor skills-contacto margen-cero">
         <div class="contenido-skills">
           <h2>Tecnologías y habilidades...</h2>
 

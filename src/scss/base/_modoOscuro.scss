@@ -1,0 +1,114 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+
+.modo-oscuro {
+
+  background-color: v.$oscuro;
+
+  .barra {
+    background-color: v.$grisOscuroTransparente;
+
+    svg g {
+      fill: v.$claro;
+    }
+  }
+
+  .bubbles svg g path {
+    fill: #cf8abd82;
+    stroke: #cf8abd82;
+  }
+
+  .nav-desktop a {
+    color: v.$claro;
+  }
+
+  .nav-desktop a::after,
+  .seccion-proyectos .contenedor-proyecto::after,
+  .nav-telefono .linea {
+    background-color: v.$claro;
+  }
+
+  h1,
+  h2,
+  .contenido-principal .nombre,
+  .dev {
+    color: v.$claro;
+  }
+
+  p,
+  span,
+  .dev span,
+  .trabajos-destacados,
+  .trabajos-destacados svg,
+  .ver-proyectos a {
+    color: v.$claroTransparente;
+    stroke: v.$claroTransparente;
+  }
+
+  .boton-contacto {
+    color: v.$oscuro;
+
+    svg {
+      stroke: v.$oscuro;
+    }
+  }
+
+  .contenido-proyecto {
+    background-color: v.$grisOscuroBackground;
+  }
+
+  .contenedor-proyecto .imagen-proyecto a {
+    background-color: v.$grisOscuro;
+  }
+
+  .contenido-proyecto .tecnologias-proyecto {
+    color: v.$purpura;
+  }
+
+  .ver-proyectos a:hover {
+    color: v.$oscuro;
+  }
+
+  .contenedor-proyecto .imagen-proyecto div {
+    filter: grayscale(70%) contrast(1) brightness(15%) opacity(95%);
+
+    @include m.tablet {
+      filter: grayscale(100%) contrast(1) brightness(60%) opacity(75%);
+    }
+
+    &:hover {
+      filter: grayscale(0%) contrast(1) brightness(70%) opacity(100%);
+    }
+  }
+
+  .footer p {
+    color: v.$blanco;
+
+    span {
+      color: v.$claroTransparente;
+    }
+  }
+
+  .iconos-contacto li {
+    &:nth-child(1) svg,
+    &:nth-child(2) svg,
+    &:nth-child(3) svg,
+    &:nth-child(4) svg,
+    &:nth-child(5) svg {
+      fill: v.$blanco;
+    }
+  }
+
+  .iconos-contacto::after,
+  .iconos-contacto.activo::before {
+    background-color: v.$blanco;
+  }
+
+  .iconos-proyecto {
+    svg {
+      stroke: v.$blanco;
+    }
+  }
+
+}

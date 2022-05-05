@@ -1,0 +1,33 @@
+@use '../base/variables' as v;
+
+
+.barra {
+  background-color: v.$grisTransparente;
+  padding: 2rem 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  transition: all .5s ease-in-out;
+
+  .logo, svg {
+    width: 9rem;
+    max-height: 3rem;
+    z-index: 2;
+
+    g {
+      fill: v.$oscuro;
+    }
+  }
+
+  &.ocultar {
+    top: -7rem;
+  }
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

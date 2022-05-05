@@ -5,11 +5,7 @@
   incluirTemplate('bubbles');
 ?>
 
-  <div id="contenido" class="contenedor-padding portafolio">
-
-    <h1 class="titulo-portafolio"> Portafolio </h1>
-    <?php incluirTemplate('proyectos') ?>
-  </div>
+  <h1 id="contenido" class="texto-base"> Base </h1>
 
 <?php
   incluirTemplate('footer');

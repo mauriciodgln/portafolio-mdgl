@@ -1,0 +1,70 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.skills-contacto {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  @include m.tablet {
+    margin-bottom: 0;
+  }
+}
+
+.contenido-skills {
+  max-width: 90rem;
+  margin: 1.5rem auto;
+  min-height: 25rem;
+  
+  @include m.tablet {
+    padding: 5rem 0;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: v.$bold;
+    margin-bottom: 2.5rem;
+
+    @include m.tablet {
+      font-size: 2.4rem;
+    }
+  }
+
+  .contenedor-skills {
+
+    height: 100%;
+    @include m.grid(2, 2rem);
+
+    @include m.telefono {
+      @include m.grid(3, 2rem);
+    }
+
+    @include m.tablet {
+      @include m.grid(4, 2rem);
+    }
+
+    @include m.desktop {
+      @include m.grid(6, 2rem);
+    }
+
+    span {
+      font-size: 1.6rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .8rem;
+      border: solid 1px v.$gris;
+      border-radius: 1rem;
+      height: 5rem;
+
+      @include m.tablet {
+        font-size: 2rem;
+      }
+    }
+  }
+
+}
