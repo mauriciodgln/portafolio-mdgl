@@ -32,23 +32,6 @@
     }
   }
 
-  .nombre {
-    font-size: 3.6rem;
-    font-family: v.$fuenteSecundaria;
-    font-weight: v.$bold;
-    color: v.$oscuro;
-    display: block;
-    margin-top: 1rem;
-
-    @include m.telefono {
-      font-size: 5.5rem;
-    }
-
-    @include m.desktop {
-      font-size: 6.4rem;
-    }
-  }
-
   p {
     font-size: 1.8rem;
     max-width: 80rem;
@@ -56,7 +39,7 @@
   }
 
   p,
-  span {
+  .dev span {
     font-weight: v.$semibold;
 
     @include m.telefono {
@@ -73,17 +56,34 @@
   }
 }
 
+.nombre {
+  font-size: 3.6rem;
+  font-family: v.$fuenteSecundaria;
+  font-weight: v.$bold;
+  color: v.$oscuro;
+  display: block;
+  margin-top: 1rem;
+
+  @include m.telefono {
+    font-size: 5.5rem;
+  }
+
+  @include m.desktop {
+    font-size: 6.4rem;
+  }
+}
+
 .boton-contacto {
-  background-color: v.$gris;
-  border-radius: .4rem;
+  background-color: v.$verdeBotones;
+  border-radius: v.$borderRadius;
   color: v.$blanco;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  height: 5rem;
-  width: 20rem;
   margin-top: 4rem;
+  letter-spacing: .05rem;
+  padding: 1rem 4rem;
 
   svg {
     stroke: v.$blanco;
@@ -94,15 +94,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: v.$grisOscuro;
+  color: v.$oscuro;
   text-transform: uppercase;
   letter-spacing: .1rem;
   font-size: 1.4rem;
   gap: 1rem;
   margin-top: 8vh;
   height: 5rem;
-
   animation: bounce .5s alternate infinite ease-in;
+  font-weight: v.$semibold;
+
+  svg {
+    stroke: v.$oscuro;
+  }
 
   @keyframes bounce {
     0%{

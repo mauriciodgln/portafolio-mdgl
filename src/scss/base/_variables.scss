@@ -15,19 +15,23 @@ $bold: 700;
 
 // Colores
 
-$negro: #000000; // Light Mode: Iconos, Footer
-$blanco: #FFFFFF; // Light Mode: Texto botones / Dark Mode: Texto botones, Iconos
-$oscuro: #202020; // Light Mode: Titulos, Nav, Lineas Separación / Dark Mode: Background
 $gris: #9D9D9D; // Botones, Borde Skills
-$grisTransparente: #9D9D9Db3; // Light Mode: Header
-$claro: #DEDEDE; // Light Mode: Background / Dark Mode: Titulos, Nav, Lineas Separación 
+$blanco: #ffffff; // Light Mode: Texto botones / Dark Mode: Texto botones, Iconos
+$negroTransparente: #0000007a;
+$lightMode: #FBD38D;
+$enlacesTextoLight: #a1311b;
+$enlacesTextoDark: #ff937e;
+$sombraHeaderDark: #323232b3; // Dark Mode: Header
 $claroTransparente: #DEDEDEd9; // Dark Mode: Párrafos
-$grisOscuro: #1a1919; // Light Mode: Párrafos
-$grisOscuroTransparente: #323232b3; // Dark Mode: Header
-$verdeOscuro: #00631C; // Light Mode: Tecnologías
-$purpura: #cf8abd;
+$purpura: #bbbbff;
+$oscuro: #202020; // Light Mode: Titulos, Nav, Lineas Separación / Dark Mode: Background
 $grisOscuroBackground: #323232;
-$claroBackground: #b4b3b3;
+$morado: #5858a5; // Light Mode: Tecnologías
+$verdeBotones: #085720; // Light Mode: Tecnologías
+$grisOscuro: #1a1919; // Light Mode: Párrafos
+$verde: #00631C; // Light Mode: Tecnologías 
+$grisBarra: #9D9D9Db3; // Light Mode: Header
+$claro: #DEDEDE; // Light Mode: Background / Dark Mode: Titulos, Nav, Lineas Separación
 
 
 // Tamaños Media Queries
@@ -40,4 +44,4 @@ $desktop: 1080px;
 // Otros
 
 $separacion: 5rem;
-
+$borderRadius: 1rem;

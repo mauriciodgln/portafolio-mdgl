@@ -1,6 +1,5 @@
 const plumber = require('gulp-plumber');
 
-
 // Dependencias CSS
 const { src, dest, watch, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
@@ -39,7 +38,6 @@ function css( done ) {
     .pipe( sourcemaps.init() )
     .pipe( sass() )
     .pipe( postcss([autoprefixer(), cssnano()]) )
-    // .pipe(postcss([autoprefixer()]))
     .pipe( sourcemaps.write('.') )
     .pipe( dest('build/css') )
   done();
@@ -56,7 +54,7 @@ function javascript( done ) {
     .pipe( concat('bundle.js') )
     .pipe( terser() )
     .pipe( sourcemaps.write('.') )
-    .pipe( rename({ suffix: '.min' }) )
+    // .pipe( rename({ suffix: '.min' }) )
     .pipe( dest('./build/js') )
   done();
 
@@ -73,6 +71,7 @@ function imagenes( done ) {
 
 function versionWebp( done ) {
   src(paths.imagenes)
+    .pipe( cache( imagemin( { optimizationLevel: 3} ) ) )
     .pipe( webp() )
     .pipe( dest('build/img') )
   done();
@@ -80,6 +79,7 @@ function versionWebp( done ) {
 
 function versionAvif ( done ) {
   src(paths.imagenes)
+    .pipe( cache( imagemin( { optimizationLevel: 3} ) ) )
     .pipe( avif( { quality: 50 } ) )
     .pipe( dest('build/img'))
   done();

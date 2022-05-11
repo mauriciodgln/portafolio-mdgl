@@ -1,0 +1,170 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+
+.theme-dark {
+
+  background-color: v.$oscuro;
+
+  .barra {
+    box-shadow: 0 .1rem 1rem v.$sombraHeaderDark;
+
+    @include m.tablet {
+      background-color: v.$negroTransparente;
+    }
+
+    .logo svg g {
+      fill: v.$claro;
+    }
+  }
+
+  .header {
+    .div-theme {
+      background-color: v.$lightMode;
+
+      &:hover {
+        background-color: darken(v.$lightMode, 10); 
+      }
+    }
+
+    .nav-telefono {
+      border: 1px solid v.$claro;
+
+      &.activo {
+        background-color: v.$oscuro;
+      }
+    }
+  }
+
+  .bubbles svg g path {
+    fill: v.$purpura;
+    stroke: v.$purpura;
+    opacity: 0.1;
+  }
+
+  .nav-desktop a {
+    color: v.$claro;
+  }
+
+  .nav-desktop a::after,
+  .seccion-proyectos .contenedor-proyecto::after,
+  .nav-telefono .linea {
+    background-color: v.$claro;
+  }
+
+  h1,
+  h2,
+  .contenido-principal .nombre,
+  .dev {
+    color: v.$claro;
+  }
+
+  p,
+  span,
+  .dev span,
+  .trabajos-destacados,
+  .trabajos-destacados svg {
+    color: v.$claroTransparente;
+    stroke: v.$claroTransparente;
+  }
+
+  .boton-contacto {
+    background-color: v.$morado;
+    color: v.$blanco;
+
+    svg {
+      stroke: v.$blanco;
+    }
+  }
+
+  .seccion-proyectos {
+
+    .contenedor-proyecto {
+
+      .contenido-proyecto {
+        background-color: v.$grisOscuroBackground;
+      }
+  
+      .imagen-proyecto {
+        a {
+          background-color: v.$purpura;
+        }
+      }
+    }
+    
+    .ver-proyectos a {
+      color: v.$blanco;
+
+      &::after {
+        background-color: v.$morado;
+      }
+    }
+
+  }
+
+  .contenido-proyecto .tecnologias-proyecto {
+    color: v.$purpura;
+  }
+
+  .footer {
+
+    p {
+      color: v.$blanco;
+    }
+
+    .redes-sociales ul a {
+      color: v.$blanco;
+    }
+  }
+
+  .iconos-contacto,
+  .contacto-iconos {
+
+    li:nth-child(1) svg {
+      stroke: none;
+    }
+
+    li svg {
+      fill: v.$blanco;
+    }
+  }
+
+  .iconos-contacto::after,
+  .iconos-contacto.activo::before {
+    background-color: v.$blanco;
+  }
+
+  .iconos-proyecto {
+    svg {
+      stroke: v.$blanco;
+    }
+  }
+
+  .flecha-inicio {
+    background-color: #464673;
+
+    svg {
+      stroke: v.$claro;
+    }
+  }
+
+  .contenido-skills {
+    .contenedor-skills span {
+      border: solid 1px v.$claro;
+    }
+  }
+
+  .contenedor-informacion {
+
+    .imagen-mau {
+      background-color: v.$grisOscuroBackground;
+    }
+
+    .info-mau {
+      a {
+        color: v.$enlacesTextoDark;
+      }
+    }
+  }
+
+}

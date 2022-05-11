@@ -2,13 +2,14 @@
 // Variables
 
 const navTelefono = document.querySelector('.nav-telefono');
-const lightDark = document.querySelector('.light-dark');
+const divTheme = document.querySelector('.div-theme');
 const lightMode = document.querySelector('.light-mode');
 const darkMode = document.querySelector('.dark-mode');
 const html = document.querySelector('html');
 const barraNav = document.querySelector('.barra');
 const navDesktop = document.querySelector('.nav-desktop');
 const trabajosDestacados = document.querySelector('.trabajos-destacados');
+const contenido = document.querySelector('#contenido');
 
 
 // Event Listeners
@@ -16,62 +17,95 @@ const trabajosDestacados = document.querySelector('.trabajos-destacados');
 eventListeners();
 function eventListeners() {
 
+  document.addEventListener('DOMContentLoaded', () => {
+    localStorage.getItem('theme') === 'dark' ? modoOscuro() : modeLocalStorage()
+  })
+
   navTelefono.addEventListener('click', desplegarMenu);
-  window.addEventListener('scroll', ocultarNav);
-  lightDark.addEventListener('click', modoOscuro);
+  divTheme.addEventListener('click', modoOscuro);
   if(trabajosDestacados) {
     trabajosDestacados.addEventListener('click', scrollSmooth);
   } else {
-    return
+    return null
   }
-
 }
 
 
 // Funciones
 
-modoPantalla();
+
+function modoOscuro() {
+
+  if(!document.body.classList.contains('theme-dark') || darkMode.classList.contains('ocultar')) {
+    document.body.classList.toggle('theme-dark');
+    document.body.classList.toggle('theme-light');
+  }
+  darkMode.classList.toggle('ocultar');
+  lightMode.classList.toggle('ocultar');
+
+  modeLocalStorage();
+}
+
+function modeLocalStorage() {
+
+  let actualModeDocument = document.body.classList.contains('theme-dark');
+
+  if(actualModeDocument) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+}
 
 function desplegarMenu() {
-  const iconosContacto = document.querySelector('.iconos-contacto');
+  // const iconosContacto = document.querySelector('.iconos-contacto');
   const footer = document.querySelector('.footer');
 
   navDesktop.classList.toggle('activo');
   navTelefono.classList.toggle('activo');
   contenido.classList.toggle('mover-Y');
 
-
   if( footer.classList.contains('activo') ) {
     
+    footer.classList.add('ocultar');
     footer.classList.remove('activo');
-    iconosContacto.classList.remove('activo');
+
+    setTimeout(() => {
+      footer.classList.remove('ocultar');
+    }, 600);
+
+    // iconosContacto ? iconosContacto.classList.remove('activo') : null;
 
   } else {
 
+    footer.classList.add('ocultar');
     setTimeout(() => {
+      footer.classList.remove('ocultar');
       footer.classList.add('activo');
-      iconosContacto.classList.add('activo');
+      // iconosContacto ? iconosContacto.classList.add('activo') : null;
     }, 600);
 
   }
 
-  eliminarActivos(navDesktop, footer, iconosContacto);
+  eliminarActivos(navDesktop, footer);
   prohibirScroll();
   efectoBlur();
 }
 
-function eliminarActivos(navDesktop, footer, iconosContacto) {
+function eliminarActivos(navDesktop, footer) {
   window.addEventListener('resize', e => {
 
     if( window.innerWidth > 768 ) {
       
       navDesktop.classList.remove('activo');
+      navDesktop.classList.remove('blur');
+      barraNav.classList.remove('no-background');
+      barraNav.classList.add('blur');
       footer.classList.remove('activo');
       iconosContacto.classList.remove('activo');
       navTelefono.classList.remove('activo');
       contenido.classList.remove('mover-Y');
       html.classList = [];
-
     }
   
   });
@@ -90,50 +124,6 @@ function prohibirScroll() {
   html.classList.toggle('no-scroll-long');
 }
 
-function ocultarNav() {
-
-  if( window.scrollY > 70 ) {
-
-    barraNav.classList.add('ocultar');
-
-  } else {
-
-    barraNav.classList.remove('ocultar');
-
-  }
-}
-
-function modoOscuro() {
-  document.body.classList.toggle('modo-oscuro');
-  darkMode.classList.toggle('ocultar');
-  lightMode.classList.toggle('ocultar');
-}
-
-function modoPantalla() {
-
-  const prefiereDarkMode = window.matchMedia('(prefers-color-scheme:dark)');
-
-  if(prefiereDarkMode.matches) {
-    document.body.classList.add('modo-oscuro');
-    lightMode.classList.remove('ocultar');
-    darkMode.classList.add('ocultar');
-  } else {
-    document.body.classList.remove('modo-oscuro');
-  }
-
-  prefiereDarkMode.addEventListener('change', ()=> {
-    if(prefiereDarkMode.matches) {
-      document.body.classList.add('modo-oscuro');
-      lightMode.classList.remove('ocultar');
-      darkMode.classList.add('ocultar');
-    } else {
-      document.body.classList.remove('modo-oscuro');
-      lightMode.classList.add('ocultar');
-      darkMode.classList.remove('ocultar');
-    }
-  });
-}
-
 function efectoBlur() {
 
   const contieneBlur = barraNav.classList.contains('blur');
@@ -149,8 +139,3 @@ function efectoBlur() {
   }
 
 }
-
-const proyectos = document.querySelectorAll('.seccion-proyectos .contenedor-proyecto');
-const ultimoProyecto = proyectos[proyectos.length-1];
-
-ultimoProyecto.classList.add('ultimo-proyecto');

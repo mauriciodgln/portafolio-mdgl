@@ -14,6 +14,12 @@
     position: absolute;
     right: 0;
     bottom: 0;
+
+    g path {
+      fill: v.$verdeBotones;
+      stroke: v.$verdeBotones;
+      opacity: 0.2;
+    }
   }
 
 }

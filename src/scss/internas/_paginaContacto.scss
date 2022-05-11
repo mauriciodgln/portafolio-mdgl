@@ -1,0 +1,80 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.pagina-contacto {
+
+  strong {
+    font-size: 2rem;
+  }
+
+  .contenido-contacto {
+    max-width: 90rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      padding: 8rem 0;
+    }
+  }
+
+}
+
+.contacto-email {
+
+  @include m.tablet {
+    grid-column: 1 / 7;
+    text-align: start;
+  }
+}
+
+.contacto-media {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include m.tablet {
+    grid-column: 7 / 13;
+    text-align: end;
+    justify-content: space-between;
+  }
+
+  .contacto-iconos {
+
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 4rem;
+
+      li {
+        transition: 0.25s ease-out;
+
+        &:nth-child(1) svg {
+          fill: #0a66c2;
+        }
+  
+        &:nth-child(2) svg {
+          fill: #b72f8a;
+        }
+
+        &:hover {
+          transform: translateY(-.75rem);
+        }
+      }
+
+      svg {
+        height: 3.5rem;
+        width: 3.5rem;
+      }
+
+      @include m.tablet {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

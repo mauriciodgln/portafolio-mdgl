@@ -14,6 +14,8 @@ html {
 html {
 
   overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
 
   &.no-scroll {
     overflow: hidden!important;
@@ -21,21 +23,22 @@ html {
 
     body {
       overflow: hidden!important;
-      height: 100%!important;
+      height: 100vh!important;
     }
   }
 
   &.no-scroll-long {
     overflow-y: scroll!important;
+    position: static;
   }
 }
 
 ::-webkit-scrollbar {
-  width: .8rem;   
+  width: 1rem;   
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: v.$grisTransparente;
+  background-color: v.$grisBarra;
   border-radius: 1rem;
 }
 
@@ -43,9 +46,10 @@ body {
   font-family: v.$fuentePrincipal;
   font-size: 1.6rem;
   -webkit-tap-highlight-color: rgba(0,0,0,0); // Elimina fondo azul al dar click en botón en dispositivo móvil
-  background-color: v.$claro;
-  transition: all .5s ease-in;
-  min-height: 100vh;
+}
+
+.theme-light {
+  background-color: v.$blanco;
 }
 
 img,
@@ -106,5 +110,6 @@ a {
 }
 
 #contenido {
-  transition: all .5s ease-out;
+  transition: .5s ease-out;
+  margin-bottom: 15rem;
 }

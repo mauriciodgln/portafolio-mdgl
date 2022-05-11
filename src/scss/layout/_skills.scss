@@ -11,17 +11,21 @@
   @include m.tablet {
     margin-bottom: 0;
   }
+  
+  .contenido-contacto, 
+  .contenido-skills {
+    margin: 1.5rem auto;
+
+    @include m.tablet {
+      padding: 5rem 0;
+    }
+  }
+
 }
 
 .contenido-skills {
   max-width: 90rem;
-  margin: 1.5rem auto;
   min-height: 25rem;
-  
-  @include m.tablet {
-    padding: 5rem 0;
-    margin: 0 auto;
-  }
 
   h2 {
     font-size: 2.4rem;
@@ -35,19 +39,18 @@
 
   .contenedor-skills {
 
-    height: 100%;
     @include m.grid(2, 2rem);
 
     @include m.telefono {
-      @include m.grid(3, 2rem);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include m.tablet {
-      @include m.grid(4, 2rem);
+      grid-template-columns: repeat(4, 1fr);
     }
 
     @include m.desktop {
-      @include m.grid(6, 2rem);
+      grid-template-columns: repeat(6, 1fr);
     }
 
     span {
@@ -57,8 +60,8 @@
       justify-content: center;
       align-items: center;
       padding: .8rem;
-      border: solid 1px v.$gris;
-      border-radius: 1rem;
+      border: solid 1px v.$oscuro;
+      border-radius: v.$borderRadius;
       height: 5rem;
 
       @include m.tablet {

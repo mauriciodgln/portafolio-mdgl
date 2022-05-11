@@ -4,57 +4,59 @@
 
 .nav-telefono {
   position: relative;
-  height: 3rem;
-  width: 3rem;
-  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid v.$oscuro;
+  border-radius: v.$borderRadius;
+  gap: 0.15rem;
+  margin-left: 1rem;
+  cursor: pointer;
 
   @include m.tablet {
     display: none;
   }
 
   .linea {
-    height: .3rem;
-    width: 100%;
+    height: .25rem;
+    width: 2.3rem;
     background-color: v.$oscuro;
     border-radius: .5rem;
-    display: block;
-    margin-block: .2rem;
     transition: .3s;
 
     &:nth-child(1),
     &:nth-child(3) {
-      width: 70%;
+      width: 1.5rem;
     }
 
   }
 
   &.activo {
 
+    background-color: v.$claro;
+
     .linea {
+
+      position: absolute;
 
       &:nth-child(1),
       &:nth-child(3) {
-        width: 100%;
+        width: 2.3rem;
       }
 
       &:nth-child(1) {
         transform: rotate(45deg)
-        translateX(.5rem)
-        translateY(.45rem);
       }
 
       &:nth-child(2) {
-        opacity: 0;
+        width: 0;
       }
 
       &:nth-child(3) {
         transform: rotate(-45deg)
-        translateX(.5rem)
-        translateY(-.45rem)
       }
 
     }
@@ -78,29 +80,30 @@
   a {
     opacity: 0;
     transition: all 700ms ease;
-    padding: 2.5rem 0;
+    padding: 3rem 0;
     color: v.$oscuro;
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: v.$bold;
     text-align: center;
     transform: translateY(-100vh);
 
     &:first-of-type {
-      margin-top: 10rem;
+      margin-top: 15vh;
     }
   }
 
   @include m.tablet{
-    position: inherit;
+    position: static;
     height: auto;
     background-color: transparent;
     flex-direction: row;
-    width: auto;
+    align-items: center;
     transition: none;
+    justify-content: flex-start;
 
     a {
       opacity: 1;
-      margin: 0 1.5rem;
+      margin: 0 1rem;
       transition: none;
       padding: 0;
       text-align: center;
@@ -110,11 +113,11 @@
       &::after {
         content: '';
         display: block;
-        height: .7rem;
+        height: .1rem;
         width: 0%;
         background-color: v.$oscuro;
         position: absolute;
-        bottom: -.5rem;
+        bottom: -.1rem;
         left: 0;
         transition: 500ms;
       }

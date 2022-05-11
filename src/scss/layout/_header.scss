@@ -1,22 +1,39 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 
 .barra {
-  background-color: v.$grisTransparente;
-  padding: 2rem 0;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 2;
-  transition: all .5s ease-in-out;
+  transition: .5s ease-in-out;
+  box-shadow: 0 0 1rem v.$oscuro;
 
-  .logo, svg {
-    width: 9rem;
-    max-height: 3rem;
-    z-index: 2;
+  @include m.tablet {
+    background-color: v.$claroTransparente;
+  }
+
+  .logo {
+    position: relative;
+    min-width: 10rem;
+    z-index: 1;
+    display: flex;
+    margin-right: 3rem;
+    transition: .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     g {
       fill: v.$oscuro;
+    }
+
+    a, svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -29,5 +46,53 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .div-theme {
+    height: 4rem;
+    min-width: 4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid v.$oscuro;
+    border-radius: v.$borderRadius;
+    cursor: pointer;
+    background-color: v.$morado;
+    z-index: 1;
+    transition: .3s;
+
+    &:active {
+      transform: translateY(15%);
+      opacity: 0;
+    }
+
+    &:hover {
+      background-color: darken(v.$morado, 10); 
+    }
+  }
+
+  .mix-header {
+    display: flex;
+  }
+}
+
+.button-theme {
+  background-color: transparent;
+  border-width: 0;
+  cursor: pointer;
+  max-height: 2.5rem;
+
+  .light-mode,
+  .dark-mode {
+    padding: 0.2rem;
+  }
+
+  .light-mode g {
+    stroke: v.$oscuro;
+  }
+
+  .dark-mode path {
+    fill: v.$blanco;
+  }
 }

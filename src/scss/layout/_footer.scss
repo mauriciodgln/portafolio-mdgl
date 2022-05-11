@@ -3,17 +3,28 @@
 
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 
-  padding: 3rem 0;
+  @include m.desktop {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
   &.activo {
-    position: absolute;
-    bottom: 2rem;
-    left: 0;
-    right: 0;
-    opacity: 1;
     z-index: 2;
-    padding: 2rem 0;
+
+    .redes-sociales {
+      display: none;
+    }
 
     @include m.telefonoHorizontal {
       display: none;
@@ -24,13 +35,33 @@
     text-align: center;
     font-size: 1.6rem;
     font-weight: v.$semibold;
-  
-    span {
-      color: v.$grisOscuro;
-    }
 
     @include m.telefono {
       font-size: 1.8rem;
+    }
+  }
+
+  .redes-sociales {
+
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-right: 2rem;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        color: v.$oscuro;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 

@@ -5,7 +5,7 @@
   incluirTemplate('bubbles');
 ?>
 
-  <h1 id="contenido" class="texto-base"> Base </h1>
+  <h1 id="contenido" class="titulo"> Base </h1>
 
 <?php
   incluirTemplate('footer');
