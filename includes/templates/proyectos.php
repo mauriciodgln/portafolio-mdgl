@@ -16,7 +16,6 @@
             target="_blank"
             >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-github"
               width="32"
               height="32"
@@ -38,7 +37,6 @@
         <div class="icono">
           <a href="http://bienesraicesphp.x10.mx" target="_blank">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-external-link"
               width="32"
               height="32"
@@ -61,7 +59,7 @@
         </div>
         <div class="icono">
           <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <title>Leer Más</title>
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <circle cx="12" cy="12" r="2" />
@@ -105,7 +103,6 @@
             target="_blank"
             >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-github"
               width="32"
               height="32"
@@ -127,7 +124,6 @@
         <div class="icono">
           <a href="https://mauriciodgln.github.io/LocalStorage" target="_blank">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-external-link"
               width="32"
               height="32"
@@ -150,7 +146,7 @@
         </div>
         <div class="icono">
           <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <title>Leer Más</title>
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <circle cx="12" cy="12" r="2" />
@@ -198,7 +194,6 @@
                 target="_blank"
                 >
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-brand-github"
                   width="32"
                   height="32"
@@ -220,7 +215,6 @@
             <div class="icono">
               <a href="https://mauriciodgln.github.io/RockPaperScissors/" target="_blank">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-external-link"
                   width="32"
                   height="32"
@@ -243,7 +237,7 @@
             </div>
             <div class="icono">
               <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <title>Leer Más</title>
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <circle cx="12" cy="12" r="2" />
@@ -287,7 +281,6 @@
                 target="_blank"
                 >
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-brand-github"
                   width="32"
                   height="32"
@@ -309,7 +302,6 @@
             <div class="icono">
               <a href="https://mauriciodgln.github.io/FestivalMusica/" target="_blank">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-external-link"
                   width="32"
                   height="32"
@@ -332,7 +324,7 @@
             </div>
             <div class="icono">
               <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <title>Leer Más</title>
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <circle cx="12" cy="12" r="2" />
@@ -376,7 +368,6 @@
                 target="_blank"
                 >
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-brand-github"
                   width="32"
                   height="32"
@@ -398,7 +389,6 @@
             <div class="icono">
               <a href="https://mauriciodgln.github.io/BlogCafe/" target="_blank">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-external-link"
                   width="32"
                   height="32"
@@ -421,7 +411,7 @@
             </div>
             <div class="icono">
               <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="icon icon-tabler icon-tabler-eye" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <title>Leer Más</title>
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <circle cx="12" cy="12" r="2" />
