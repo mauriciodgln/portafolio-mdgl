@@ -20,6 +20,10 @@ function eventListeners() {
   document.addEventListener('DOMContentLoaded', () => {
     localStorage.getItem('theme') === 'dark' ? modoOscuro() : modeLocalStorage()
   })
+  
+  document.addEventListener('scroll', ()=>{
+    scrollY > 80 ? barraNav.classList.add('bg-nav') : barraNav.classList.remove('bg-nav');
+  });
 
   navTelefono.addEventListener('click', desplegarMenu);
   divTheme.addEventListener('click', modoOscuro);
@@ -64,6 +68,7 @@ function desplegarMenu() {
   navDesktop.classList.toggle('activo');
   navTelefono.classList.toggle('activo');
   contenido.classList.toggle('mover-Y');
+  navDesktop.classList.add('blur');
 
   if( footer.classList.contains('activo') ) {
     
@@ -89,26 +94,6 @@ function desplegarMenu() {
 
   eliminarActivos(navDesktop, footer);
   prohibirScroll();
-  efectoBlur();
-}
-
-function eliminarActivos(navDesktop, footer) {
-  window.addEventListener('resize', e => {
-
-    if( window.innerWidth > 768 ) {
-      
-      navDesktop.classList.remove('activo');
-      navDesktop.classList.remove('blur');
-      barraNav.classList.remove('no-background');
-      barraNav.classList.add('blur');
-      footer.classList.remove('activo');
-      iconosContacto.classList.remove('activo');
-      navTelefono.classList.remove('activo');
-      contenido.classList.remove('mover-Y');
-      html.classList = [];
-    }
-  
-  });
 }
 
 function scrollSmooth(e) {
@@ -124,18 +109,19 @@ function prohibirScroll() {
   html.classList.toggle('no-scroll-long');
 }
 
-function efectoBlur() {
+function eliminarActivos(navDesktop, footer) {
+  window.addEventListener('resize', e => {
 
-  const contieneBlur = barraNav.classList.contains('blur');
-
-  if(contieneBlur) {
-    barraNav.classList.remove('blur');
-    barraNav.classList.add('no-background');
-    navDesktop.classList.add('blur');
-  } else {
-    barraNav.classList.add('blur');
-    barraNav.classList.remove('no-background');
-    navDesktop.classList.remove('blur');
-  }
-
+    if( window.innerWidth > 768 ) {      
+      contenido.classList.remove('mover-Y');
+      navDesktop.classList.remove('activo');
+      navDesktop.classList.remove('blur');
+      barraNav.classList.remove('no-background');
+      footer.classList.remove('activo');
+      navTelefono.classList.remove('activo');
+      html.classList = [];
+      // iconosContacto.classList.remove('activo');
+    }
+  
+  });
 }

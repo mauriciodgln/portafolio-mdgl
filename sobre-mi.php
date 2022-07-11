@@ -13,7 +13,7 @@
       <div class="intro-info">
         <p>Hola! Mi nombre es <br><span class="nombre">Mauricio González</span></p>
 
-        <p>Desarrollador Web Front End ?🤔</p>
+        <p>Desarrollador Web 👨🏽‍💻</p>
       </div>
 
       <div class="imagen-mau">
@@ -62,7 +62,7 @@
       <div class="info-mau">
         <p>
           Siempre estoy dispuesto a aprender nuevas tecnologías tanto en BackEnd como en FrontEnd. <br>
-          Algunos de los frameworks, librerías y lenguajes de programación que deseo aprender son: React, Angular, TypeScript.
+          Algunos de los frameworks, librerías y lenguajes de programación que deseo aprender son: Laravel, React y Angular.
         </p>
       </div>
 

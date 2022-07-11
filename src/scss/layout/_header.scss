@@ -7,12 +7,6 @@
   position: fixed;
   top: 0;
   z-index: 2;
-  transition: .5s ease-in-out;
-  box-shadow: 0 0 1rem v.$oscuro;
-
-  @include m.tablet {
-    background-color: v.$claroTransparente;
-  }
 
   .logo {
     position: relative;
@@ -46,8 +40,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   .div-theme {
     height: 4rem;
@@ -95,4 +89,8 @@
   .dark-mode path {
     fill: v.$blanco;
   }
+}
+
+.bg-nav {
+  background-color: v.$blanco;
 }

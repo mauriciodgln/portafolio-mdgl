@@ -4,18 +4,14 @@
 
 .theme-dark {
 
+  .bg-nav {
+    background-color: v.$oscuro;
+  }
+
   background-color: v.$oscuro;
 
-  .barra {
-    box-shadow: 0 .1rem 1rem v.$sombraHeaderDark;
-
-    @include m.tablet {
-      background-color: v.$negroTransparente;
-    }
-
-    .logo svg g {
-      fill: v.$claro;
-    }
+  .barra .logo svg g {
+    fill: v.$claro;
   }
 
   .header {
@@ -64,7 +60,7 @@
   .dev span,
   .trabajos-destacados,
   .trabajos-destacados svg {
-    color: v.$claroTransparente;
+    color: v.$claroTransparente!important;
     stroke: v.$claroTransparente;
   }
 

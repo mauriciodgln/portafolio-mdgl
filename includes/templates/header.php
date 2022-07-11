@@ -28,7 +28,7 @@
 
     </script>
 
-    <header class="barra blur">
+    <header class="barra">
       <div class="contenedor-padding header">
 
         <div class="logo">
@@ -74,7 +74,7 @@
           <a href="../../sobre-mi.php">Sobre mí</a>
           <a href="../../portafolio.php">Proyectos</a>
           <a href="../../contacto.php">Contacto</a>
-          <a href="../../CV.pdf" target="_blank">CV</a>
+          <a href="../../CVDev.pdf" target="_blank">CV</a>
         </nav>
 
         <div class="mix-header">

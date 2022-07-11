@@ -40,7 +40,7 @@
 
   p,
   .dev span {
-    font-weight: v.$semibold;
+    font-weight: v.$bold;
 
     @include m.telefono {
       font-size: 2rem;
@@ -51,7 +51,8 @@
     }
   }
 
-  span {
+  .dev span {
+    font-weight: v.$regular;
     color: v.$grisOscuro;
   }
 }
@@ -83,7 +84,7 @@
   gap: 1rem;
   margin-top: 4rem;
   letter-spacing: .05rem;
-  padding: 1rem 4rem;
+  padding: 1.5rem 3rem;
 
   svg {
     stroke: v.$blanco;
@@ -102,7 +103,6 @@
   margin-top: 8vh;
   height: 5rem;
   animation: bounce .5s alternate infinite ease-in;
-  font-weight: v.$semibold;
 
   svg {
     stroke: v.$oscuro;
